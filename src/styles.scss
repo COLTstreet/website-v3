@@ -1,1 +1,262 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$dv-admin-primary: mat-palette($mat-green);
+$dv-admin-accent: mat-palette($mat-indigo, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$dv-admin-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$dv-admin-theme: mat-light-theme($dv-admin-primary, $dv-admin-accent, $dv-admin-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($dv-admin-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@import '~compass-mixins/lib/compass/css3';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #282828 !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif !important;
+}
+
+.home {
+  background-image: url("assets/website-bk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.info-bk {
+  height: 600px;
+  background: #282828;
+  background: -moz-linear-gradient(left, #282828 77%, #326024 77%, #326024 77%);
+  background: -webkit-linear-gradient(left, #282828 77%, #326024 77%, #326024 77%);
+  background: linear-gradient(to right, #282828 77%, #326024 77%, #326024 77%);
+}
+
+.info-text {
+  padding-top: 100px;
+}
+
+.social-btn {
+  font-size: 42px;
+  margin-right: 10px !important;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .hover {
+      @include opacity(0.4);
+    }
+
+    .hover-img {
+      @include transform(translate(var(--translate-x), var(--translate-y)));
+    }
+  }
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.portfolio {
+  background: #E6E6E6;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.portfolio-sq {
+  height: 200px;
+  background: #c7c7c7;
+  margin: 5px;
+}
+
+.portfolio-sq-icon {
+  color: #5D5D5D;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 100px;
+}
+
+.portfolio-sq-icon a {
+  text-decoration: none;
+  color: #5D5D5D;
+}
+
+.portfolio-sq-icon a:hover {
+  color: #212529;
+}
+
+.portfolio-sq-title {
+  margin-left: 5px;
+  font-size: 18px;
+  color: #5D5D5D;
+}
+
+.footer {
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.hover {
+  @include transition(all 380ms cubic-bezier(.16, .01, .77, 1));
+  @include opacity(0);
+}
+
+.hover-img {
+  @include transition(opacity, transform 320ms cubic-bezier(.16, .01, .77, 1));
+
+  &:after {
+    content: '';
+    @extend .fill;
+    background-color: #42b31d;
+    mix-blend-mode: color; //overlay, darken
+  }
+}
+
+.cover-img {
+  @include background-size(cover);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("assets/about-me.png");
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .home {
+    background-image: url("assets/website-bk-sm.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh
+  }
+}
+
+.link {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 50px;
+}
+
+.link:before,
+.link:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 10px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #212529;
+}
+
+.link:before {
+  left: -2.5px;
+}
+
+.link:after {
+  right: 2.5px;
+  background: #212529;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link:hover:before {
+  background: #212529;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+.link-sm {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+.link-sm:before,
+.link-sm:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: 45%;
+  margin-top: -0.5px;
+  background: #212529;
+}
+
+.link-sm:before {
+  left: -2.5px;
+}
+
+.link-sm:after {
+  right: 2.5px;
+  background: #212529;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link-sm:hover:before {
+  background: #212529;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link-sm:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
