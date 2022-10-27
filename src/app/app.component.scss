@@ -1,0 +1,64 @@
+.bk {
+  background: url("/assets/light-bk.png") no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.toolbar {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  background-color: #020202;
+}
+
+.home-icon-button {
+  height: 100%;
+  font-size: 35px;
+  text-align: center;
+}
+
+.social {
+  position: fixed;
+  z-index: 100;
+}
+
+.profile {
+  position: fixed;
+  right: 0px;
+  z-index: 100;
+}
+
+.social-icon {
+  color: black;
+}
+
+.social-icon:hover {
+  color: #007BFF;
+}
+
+.about-me-container {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  background: #101010;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .bk {
+    background: url("/assets/light-bk.jpg") no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}

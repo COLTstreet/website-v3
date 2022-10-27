@@ -1,4 +1,79 @@
-<div class="container-flex">
+<div class="social">
+  <button mat-icon-button class="social-btn">
+    <a href="https://www.linkedin.com/in/coltstreet/" target="_blank" class="social-icon"><i
+        class="fab fa-linkedin fa-2x"></i></a>
+  </button>
+  <button mat-icon-button class="social-btn">
+    <a href="https://github.com/COLTstreet" target="_blank" class="social-icon"><i
+        class="fab fa-github-square fa-2x"></i></a>
+  </button>
+</div>
+<div class="profile">
+  <button mat-icon-button class="social-icon" (click)="showAboutMe = !showAboutMe" matTooltip="About Me!">
+    <i class="fas fa-user fa-2x"></i>
+  </button>
+</div>
+<div class="about-me-container" *ngIf="showAboutMe" [@slideInOut]>
+  <div>
+    <p class="text">
+      Hi! My name is Colt Street and I am a full stack developer with a personal priority focus on front end
+      development and web design. I currently reside in Charlotte, NC. and work for Data Ventures. Developing
+      unique and engaging websites and web applications is a passion of mine. Most of my
+      current work (along with this website) exhibits my proficiency in the utilization of Angular.
+      However, I enjoy expanding my knowledge by learning new and exciting languages that will help to further my
+      craft in web development.
+    </p>
+    <p class="text">
+      When I'm not immersed in code and web applications, I enjoy sports of almost any kind. Because of the
+      complexity and spontaneity of these two worlds, finding ways to incorporate web design and sports has become
+      a passion of mine. Apart from this, my aspirations include exploring new ways to display and interact with the
+      user, regardless of the content. Overall, I enjoy building websites and creating web applications, watching movies
+      and playing basketball with my amazing wife (3x Co-Ed league champs), hanging out with our adorable
+      Miniature Dachshund, watching my son grow up, sipping on a nice cold beer, and just enjoying what life decides to throw at me.
+    </p>
+  </div>
+</div>
+<div class="container-fluid h-100 bk">
+  <div class="row h-100">
+    <div class="col-12 toolbar">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="home-icon-button">
+            <a href="https://hoopfire-api.firebaseapp.com" target="_blank" matTooltip="Hoopfire"><i
+                class="fas fa-fire-alt"></i></a>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="home-icon-button">
+            <a href="https://codepen.io/COLTstreet/pen/JxrPba" target="_blank" matTooltip="Responsive Bracket"><i
+                class="fab fa-codepen"></i></a>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="home-icon-button">
+            <a href="https://natriumefcu.com" target="_blank" matTooltip="Client Website"><i
+                class="fas fa-money-check-alt"></i></a>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+      <!-- <div class="d-flex justify-content-center align-items-center">
+        <div class="home-icon-button">
+          <a href="https://hoopfire-api.firebaseapp.com" target="_blank" matTooltip="Hoopfire"><i
+              class="fas fa-fire-alt"></i></a>
+        </div>
+        <div class="home-icon-button">
+          <a href="https://codepen.io/COLTstreet/pen/JxrPba" target="_blank" matTooltip="Responsive Bracket"><i
+              class="fab fa-codepen"></i></a>
+        </div>
+        <div class="home-icon-button">
+          <a href="https://natriumefcu.com" target="_blank" matTooltip="Client Website"><i
+              class="fas fa-money-check-alt"></i></a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- <div class="container-flex">
   <section class="home">
     <div class="row h-100 align-items-center p-0 m-0">
       <div class="col-md-6 text-right">
@@ -98,4 +173,4 @@
       <a class="text-white" href="mailto:colt.k.street@gmail.com" target="_top">colt.k.street@gmail.com</a>
     </div>
   </section>
-</div>
+</div> -->
