@@ -34,33 +34,6 @@ export class AppComponent implements OnInit {
 
   title = 'coltstreet.com';
 
-  showAboutMe = false;
-
-  customOptions: OwlOptions = {
-    loop: true,
-    autoplay: true,
-    autoplayTimeout:2500,
-    autoplayHoverPause: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    autoplaySpeed: 800,
-    animateIn: true,
-    animateOut: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 3
-      }
-    }
-  }
-
   ngOnInit() {
   }
 
