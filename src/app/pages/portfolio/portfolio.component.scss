@@ -1,0 +1,32 @@
+.tab-group-container {
+  border: 1px solid #CDDC39;
+  margin-right: 15px;
+}
+
+.grid-container {
+  position: absolute;
+  bottom: 0;
+}
+
+.grid-tile {
+  background: #33691e;
+  border: 5px solid black;
+  color: #cddc39;
+  height: 100%;
+}
+
+.website-icon {
+  text-decoration: none !important;
+  color: #cddc39;
+}
+
+.tile-icon {
+  text-decoration: none !important;
+  color: #cddc39;
+  cursor: pointer;
+}
+
+.code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 12px;
+}

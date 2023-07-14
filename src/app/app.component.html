@@ -1,0 +1,46 @@
+<mat-toolbar class="header-toolbar">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <div *ngIf="!sidenav.opened"> <i class="fa-solid fa-bars"></i> </div>
+    <div *ngIf="sidenav.opened"> <i class="fa-solid fa-square-xmark"></i> </div>
+  </button>
+  <div><a routerLink="home"><img class="logo" src="../assets/Logo-White.png" /></a></div>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" class="cv-button" (click)="downloadResume()">Download CV</button>
+  <button mat-mini-fab color="primary" class="cv-icon-button" (click)="downloadResume()"><i
+      class="fa-solid fa-file"></i></button>
+  <a mat-icon-button color="primary" class="social-icon" href="https://www.linkedin.com/in/coltstreet/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a mat-icon-button color="primary" class="social-icon" href="https://github.com/COLTstreet" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="">
+    <img class="avatar" src="../assets/headshot.png" />
+
+    <h4 class="name">Colt Street</h4>
+    <p class="designation">Developer</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="home">
+      <i class="fa-solid fa-house"></i>
+      <span class="pl-2">Home</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="portfolio">
+      <i class="fa-regular fa-folder-open"></i>
+      <span class="pl-2">Portfolio</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="about-me">
+      <i class="fa-regular fa-user"></i>
+      <span class="pl-2">About</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

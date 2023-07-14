@@ -1,0 +1,65 @@
+.blue-square {
+  background-color: #20A39E;
+}
+
+.blue-square img {
+  height: 100%;
+}
+
+.yellow-square {
+  background-color: #FFBA49;
+}
+
+.yellow-square img {
+  height: 100%;
+}
+
+.astronaut-square {
+  background-color: #263238;
+}
+
+.astronaut-square img {
+  height: 100%;
+}
+
+.red-square {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 5rem;
+  background: #EF5B5B;
+}
+
+.alt-blue-square {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 5rem;
+  background: #20A39E;
+}
+
+.purple-square {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 5rem;
+  background: #23001E;
+  color: white;
+}
+
+.stripes-square {
+  background-image: linear-gradient(135deg, #000000 25%, #20a39e 25%, #20a39e 50%, #000000 50%, #000000 75%, #20a39e 75%, #20a39e 100%);
+  background-size: 62px 62px;
+}
+
+.no-mobile {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .no-mobile {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}

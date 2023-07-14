@@ -6,18 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MaterialModule } from './material/material.module';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AboutMeComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    CarouselModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

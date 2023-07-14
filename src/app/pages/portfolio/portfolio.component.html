@@ -1,0 +1,63 @@
+<mat-tab-group backgroundColor="primary" class="h-100 tab-group-container">
+  <mat-tab label="Websites">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 p-0" *ngFor="let tile of websiteTiles">
+          <div class="grid-tile">
+            <div class="container-fluid">
+              <div class="row pt-2">
+                <div class="col-6">
+                  <a class="website-icon"><i class="fa-solid fa-window-maximize fa-2x"></i></a>
+                </div>
+                <div class="col-6 text-right">
+                  <a class="tile-icon pr-3" target="_blank" href="{{tile.github}}" *ngIf="tile.github"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a class="tile-icon" target="_blank" href="{{tile.link}}" *ngIf="tile.link"><i
+                      class="fa-solid fa-square-up-right"></i></a>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-12">
+                  <h4 class="title">{{tile.title}}</h4>
+                  <p class="description">{{tile.description}}</p>
+                  <p class="code">{{tile.code}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <!-- <mat-tab label="Print Designs">Print Designs</mat-tab> -->
+  <mat-tab label="Misc">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 p-0" *ngFor="let tile of miscTiles">
+          <div class="grid-tile">
+            <div class="container-fluid">
+              <div class="row pt-2">
+                <div class="col-6">
+                  <a class="website-icon"><i class="fa-solid fa-window-maximize fa-2x"></i></a>
+                </div>
+                <div class="col-6 text-right">
+                  <a class="tile-icon pr-3" target="_blank" href="{{tile.github}}" *ngIf="tile.github"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a class="tile-icon" target="_blank" href="{{tile.link}}" *ngIf="tile.link"><i
+                      class="fa-solid fa-square-up-right"></i></a>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-12">
+                  <h4 class="title">{{tile.title}}</h4>
+                  <p class="description">{{tile.description}}</p>
+                  <p class="code">{{tile.code}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,64 +1,74 @@
-.bk {
-  background: url("/assets/light-bk.png") no-repeat top center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.toolbar {
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  background-color: #020202;
-}
-
-.home-icon-button {
-  height: 100%;
-  font-size: 35px;
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #212121;
+  color: #cddc39;
+  border-radius: 10px;
+  padding: 16px;
   text-align: center;
 }
 
-.social {
-  position: fixed;
-  z-index: 100;
+mat-sidenav-container {
+  height: calc(100vh - 65px);
 }
 
-.profile {
-  position: fixed;
-  right: 0px;
-  z-index: 100;
+.spacer {
+  flex: 1 1 auto;
 }
 
-.social-icon {
-  color: black;
+.content {
+  height: calc(100vh - 100px);
+  border-radius: 10px;
+  margin: 16px 0px 0px 32px;
+  overflow: hidden;
 }
 
-.social-icon:hover {
-  color: #007BFF;
-}
-
-.about-me-container {
-  position: absolute;
-  height: 100%;
+.menu-button {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
 }
 
-.text {
-  background: #101010;
-  padding: 10px;
+.logo {
+  width: 45%;
+}
+
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+.header-toolbar {
+  background: #212121;
   color: white;
-  text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+.cv-icon-button {
+  display: none;
+}
 
-  .bk {
-    background: url("/assets/light-bk.jpg") no-repeat top center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+@media screen and (max-width: 800px) {
+  .cv-button {
+    display: none;
+  }
+
+  .cv-icon-button {
+    display: block;
   }
 }
